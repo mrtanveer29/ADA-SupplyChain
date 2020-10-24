@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout
+        android:padding="5dp"
+        android:background="#ededed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#ffffff"
+            android:layout_marginBottom="2dp"
+            android:paddingBottom="2dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#afe9ff"
+                android:background="@drawable/circle"
+                android:text="26 Pcs"
+                android:textSize="@dimen/list_heading"
+                android:id="@+id/txtTotalDeliveryItem"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="#414040"
+                    android:textStyle="bold"
+                    android:text="Delivery Code : Xysnn78789"
+                    android:textSize="@dimen/list_heading"
+                    android:id="@+id/txtDeliveryCode"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="#2d82bc"
+                    android:text="24-Sept-2017"
+                    android:textSize="@dimen/list_heading"
+                    android:id="@+id/txtDeliveryDate"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="#686666"
+                    android:text="Requsition code : HBHNSUB67687"
+                    android:textSize="@dimen/list_details"
+                    android:id="@+id/txtRequisitionCodeChallan"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="#686666"
+                    android:text="Courier Name : Rainbow courier"
+                    android:textSize="@dimen/list_details"
+                    android:id="@+id/txtCouriername"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Delivery Items"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#479aec"
+            android:background="#ffffff"
+            android:textSize="@dimen/list_heading"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/deliveryItemListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

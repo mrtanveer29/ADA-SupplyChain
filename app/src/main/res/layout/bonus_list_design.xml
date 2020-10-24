@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    cardview:elevation="4dp"
+    cardview:cardUseCompatPadding="true">
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#D9D9D9"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:padding="5dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rebateForNameText"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:textColor="@color/list_head_text"
+            android:text="Huwawei P9 "/>
+
+        <TextView
+            android:id="@+id/rebateForAmountText"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:textColor="@color/list_detail_text"
+            android:text="Amount 200 "/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/rebateForQuantityText"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/list_detail_text"
+        android:text="25 Pc"/>
+</LinearLayout>
+</android.support.v7.widget.CardView>

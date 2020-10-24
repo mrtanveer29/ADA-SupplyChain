@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SlidingPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/requisition_sliding_panel_content"/>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/activity_requisition"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.systech.codefreaktanveer.supplychain.RequisitionActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/expectedDateView"
+            android:layout_width="match_parent"
+            android:editable="false"
+            android:background="#D9D9D9"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint="Expected date"
+            android:gravity="center"
+            android:layout_height="35dp"/>
+
+        <LinearLayout
+            android:id="@+id/addRequisition"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:background="@color/colorLightGolden"
+            android:fitsSystemWindows="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.62"
+                    android:gravity="center_vertical"
+                    android:textColor="#7A7A7A"
+                    android:layout_columnWeight=".5"
+                    android:text="Product" />
+
+                <Spinner
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:id="@+id/productlist"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.62"
+                    android:textColor="#7A7A7A"
+                    android:gravity="center_vertical"
+                    android:text="Color" />
+                <Spinner
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:id="@+id/colorlist"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".62"
+                    android:gravity="center_vertical"
+                    android:textColor="#7A7A7A"
+                    android:text="Quantity" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".75"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/txtQuantity"
+                    android:inputType="number"
+                    />
+
+                <Switch
+                    android:id="@+id/liveDymmy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:text="Live Dummy">
+
+                </Switch>
+            </LinearLayout>
+</LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/requisitionList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="2dp"
+            android:background="#D9D9D9"
+            android:orientation="vertical"
+          >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="#7A7A7A"
+                android:text="Balance : "
+                android:id="@+id/txtCurentBalance"/>
+            <TextView
+                android:id="@+id/requisitionInfo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#D9D9D9"
+                android:textColor="#7A7A7A"
+                android:text="3 Requisition: 6000 Tk"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_add"
+        app:layout_anchor="@id/addRequisition"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_marginRight="50dp"
+        app:fabSize="mini"
+        android:id="@+id/addRequisitionBtn"/>
+</android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SlidingPaneLayout>

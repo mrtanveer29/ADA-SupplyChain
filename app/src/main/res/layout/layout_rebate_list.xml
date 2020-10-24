@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardElevation="2dp">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFF"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rebateForNameText"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:textColor="@color/colourAdaTheme"
+                android:text="Rebate For Huwawei P9 (25Pc)"/>
+            <TextView
+                android:id="@+id/rebateType"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:textColor="#898383"
+                android:text="Rebate type Percentage "/>
+
+            <TextView
+                android:id="@+id/rebateAmount"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:textColor="#898383"
+                android:text="Rebate Amount 200 "/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/rebateForQuantityText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/colourAdaTheme"
+            android:text="25 Pc"/>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>

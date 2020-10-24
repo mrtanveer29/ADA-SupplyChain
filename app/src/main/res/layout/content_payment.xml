@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.jmjproduction.adasupplychain.PaymentActivity"
+    tools:showIn="@layout/activity_payment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6ddddddd"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/basicinfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colourAdaTheme"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Balance: 6000"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="@dimen/list_heading"
+            android:textColor="#fff"
+            android:id="@+id/txtRequisitionAmount"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Requisition 5000 Tk, Payable 1000"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="@dimen/list_heading"
+            android:textColor="#fff"
+            android:id="@+id/txtpayableAmount"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Amount"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/list_heading" />
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/list_heading"
+                    android:id="@+id/edittxtAmount"
+                    android:inputType="numberDecimal"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Dep Date"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/list_heading" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Deposit Date"
+                    android:gravity="center"
+                    android:textSize="@dimen/list_heading"
+                    android:id="@+id/edittxtDepositDate"
+                    android:editable="false"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#ddd"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Payment Method"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/list_heading" />
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:textSize="@dimen/list_heading"
+                android:spinnerMode="dialog"
+                android:id="@+id/spinpaymentMethod"
+                android:textColor="#000"/>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/bankLayout"
+                    android:animateLayoutChanges="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Bank Name"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/list_heading" />
+                        <Spinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:spinnerMode="dialog"
+                            android:textSize="@dimen/list_heading"
+                            android:id="@+id/spinBankname"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Branch Name"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/list_heading" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="Branch Name"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/list_heading"
+                            android:id="@+id/editxtBranchname"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Check No."
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/list_heading" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="Cheque No"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/list_heading"
+                            android:id="@+id/editxtChecqueNo"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Document Upload"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/list_heading" />
+
+                        <Button
+                            android:id="@+id/uploadFile"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:text="Upload Document"
+                            android:background="@color/colourAdaTheme"
+                            android:textColor="#fff"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/cashLayout"
+                        android:animateLayoutChanges="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Sales Representative"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/list_heading" />
+                        <Spinner
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:spinnerMode="dialog"
+                            android:textSize="@dimen/list_heading"
+                            android:id="@+id/spinSalesRepresentative"
+                            android:textColor="#000"/>
+                    </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnPaymentPost"
+        android:layout_gravity="bottom|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_payment"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        />
+</android.support.design.widget.CoordinatorLayout>
